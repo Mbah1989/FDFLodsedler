@@ -5,7 +5,7 @@
 <p>
     <a asp-page="/Board/AddMedlemmer"> Nyt Medlem</a>
 </p>
-<h1> Liste Af Medlemmer</h1>
+<h1>Medlemslisten</h1>
 
 <table class="table">
     <thead>
@@ -30,12 +30,12 @@
                     
 
                     <td>
-                        <a asp-page="/Board/SletMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-danger m-1">Delete </a>
+                        <a asp-page="/Board/SletMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-danger m-1">Slet </a>
 
                     </td>
 
                     <td>
-                        <a asp-page="/Board/OpdatereMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-primary">Update </a>
+                        <a asp-page="/Board/OpdatereMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-primary">Opdater </a>
 
 
                     </td>

@@ -3,9 +3,9 @@
 @{
 }
 <p>
-    <a asp-page="/Tickets/OpretLodseldler"> Nyt Lodseldler</a>
+    <a asp-page="/Tickets/OpretLodseldler"> Nyt Lodseddel</a>
 </p>
-<h1> Liste Af Lodselder</h1>
+<h1> Oversigt over lodsedler</h1>
 
 <table class="table">
     <thead>
@@ -32,12 +32,12 @@
                     <td> @item.AntalUdleveret</td>
    
                     <td>
-                        <a asp-page="/Tickets/SletLodselder" asp-route-sid="@item.Lod_Id" class="btn btn-danger m-1">Delete </a>
+                        <a asp-page="/Tickets/SletLodselder" asp-route-sid="@item.Lod_Id" class="btn btn-danger m-1">Slet </a>
                       
                     </td>
                    
                     <td>
-                        <a asp-page="/Tickets/OpdatereLodseldler" asp-route-sid="@item.Lod_Id" class="btn btn-primary">Update </a>
+                        <a asp-page="/Tickets/OpdatereLodseldler" asp-route-sid="@item.Lod_Id" class="btn btn-primary">Opdater </a>
 
 
                     </td>

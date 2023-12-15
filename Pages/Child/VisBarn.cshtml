@@ -5,7 +5,7 @@
 <p>
     <a asp-page="/Child/OpretBarn"> Opret Barn</a>
 </p>
-<h1> Liste af Børn</h1>
+<h1>Oversigt over børn</h1>
 <div class="card-deck">
 
 
@@ -20,16 +20,16 @@
 
             </div>
             <div class="card-footer text-sm-center">
-                <a asp-page="/Tickets/OpretLodseldler" class="btn btn-danger m-1">UdleveretLodseldler</a>
+                <a asp-page="/Tickets/OpretLodseldler" class="btn btn-danger m-1">Udlever lodseddel</a>
 
                 <a asp-page="/Sales/OpretSalg" class="btn btn-primary m-1">Salg</a>
 
 
 
 
-                <a asp-page="/Child/SletBarn" asp-route-sid="@l.Børn_Id" class="btn btn-danger m-1">Delete </a>
+                <a asp-page="/Child/SletBarn" asp-route-sid="@l.Børn_Id" class="btn btn-danger m-1">Slet </a>
 
-                <a asp-page="/Child/OpdatereBarn" asp-route-sid="@l.Børn_Id" class="btn btn-primary">Update </a>
+                <a asp-page="/Child/OpdatereBarn" asp-route-sid="@l.Børn_Id" class="btn btn-primary">Opdater </a>
 
             </div>
 

@@ -5,7 +5,7 @@
 <p>
     <a asp-page="/Leaders/OpretLeder"> Nyt Medlem</a>
 </p>
-<h1> Liste Af Ledre</h1>
+<h1>Oversigt over ledere</h1>
 <div class="card-deck">
 
 
@@ -18,9 +18,9 @@
             <div>
             </div>
             <div class="card-footer text-sm-center">
-                <a asp-page="/Leaders/SletLeder" asp-route-sid="@l.Leder_Id" class="btn btn-danger m-1">Delete </a>
+                <a asp-page="/Leaders/SletLeder" asp-route-sid="@l.Leder_Id" class="btn btn-danger m-1">Slet </a>
 
-                <a asp-page="/Leaders/OpdatereLeder" asp-route-sid="@l.Leder_Id" class="btn btn-primary">Update </a>
+                <a asp-page="/Leaders/OpdatereLeder" asp-route-sid="@l.Leder_Id" class="btn btn-primary">Opdater </a>
 
             </div>
 

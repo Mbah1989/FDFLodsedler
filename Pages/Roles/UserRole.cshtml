@@ -6,7 +6,7 @@
 
     <div class="card">
         <div class="card-header">
-            <h2> Add or remove users from this role</h2>
+            <h2>Tilføj eller fjern rolle</h2>
         </div>
 
         <div class="card-body">
@@ -24,7 +24,7 @@
 
         <div class="card-footer">
             <input type="submit" value="Update" class="btn btn-primary" style="width:auto" />
-            <a asp-page="/Roles/EditRole" asp-route-sid="@Model.UsersInRole.FirstOrDefault()?.UserId" class="btn btn-primary" style="width:auto">Cancel</a>
+            <a asp-page="/Roles/EditRole" asp-route-sid="@Model.UsersInRole.FirstOrDefault()?.UserId" class="btn btn-primary" style="width:auto">Annuller</a>
         </div>
     </div>
 

@@ -5,7 +5,7 @@
 <p>
     <a asp-page="/Sales/OpretSalg"> New Sales</a>
 </p>
-<h1> Liste Af salg</h1>
+<h1>Oversigt over salg</h1>
 
 <table class="table">
     <thead>
@@ -34,12 +34,12 @@
                     <td> @item.AntalSolgt</td>
 
                     <td>
-                        <a asp-page="/Sales/SletSalg" asp-route-sid="@item.Salg_Id" class="btn btn-danger m-1">Delete </a>
+                        <a asp-page="/Sales/SletSalg" asp-route-sid="@item.Salg_Id" class="btn btn-danger m-1">Slet </a>
 
                     </td>
 
                     <td>
-                        <a asp-page="/Sales/OpdatereSalg" asp-route-sid="@item.Salg_Id" class="btn btn-primary">Update </a>
+                        <a asp-page="/Sales/OpdatereSalg" asp-route-sid="@item.Salg_Id" class="btn btn-primary">Opdater </a>
 
 
                     </td>
