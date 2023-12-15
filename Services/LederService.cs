@@ -39,9 +39,23 @@ namespace FDFLodsedler.Services
             Context.SaveChanges();
         }
 
-        public void UpdateLeder(Leder leder)
+        public void UpdateLeder(Leder Updatedleder)
         {
-            throw new NotImplementedException();
+            Leder ExistingLeader = Context.Leders.FirstOrDefault(L=>L.Leder_Id==Updatedleder.Leder_Id);
+
+
+
+            if (ExistingLeader != null)
+            {
+
+                ExistingLeader.Navn = Updatedleder.Navn;
+                ExistingLeader.BrugerId = Updatedleder.BrugerId;
+
+
+            }
+
+
+            Context.SaveChanges();
         }
     }
 }

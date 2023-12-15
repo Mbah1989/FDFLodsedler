@@ -3,7 +3,7 @@
 @{
 }
 <p>
-    <a asp-page="/Leaders/OpretLeder"> Nyt Medlem</a>
+    <a asp-page="/Tickets/OpretLodseldler"> Nyt Lodseldler</a>
 </p>
 <h1> Liste Af Lodselder</h1>
 
@@ -32,12 +32,12 @@
                     <td> @item.AntalUdleveret</td>
    
                     <td>
-                        <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@item.BørneId" class="btn btn-danger m-1">Delete </a>
+                        <a asp-page="/Tickets/SletLodselder" asp-route-sid="@item.Lod_Id" class="btn btn-danger m-1">Delete </a>
                       
                     </td>
                    
                     <td>
-                        <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@item.BørneId" class="btn btn-primary">Update </a>
+                        <a asp-page="/Tickets/OpdatereLodseldler" asp-route-sid="@item.Lod_Id" class="btn btn-primary">Update </a>
 
 
                     </td>
@@ -46,34 +46,3 @@
             }
         }
 </table>
-
-
-
-@*<div class="card-deck">
-
-
-
-    @foreach (var l in Model.Lodseldler)
-    {
-
-        <div class="card-header">
-            <h3>@l.Lod_Id </h3>
-           
-            <h3>@l.AntalUdleveret </h3>
-            <div>
-            </div>
-            <div class="card-footer text-sm-center">
-                <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@l.BørneId" class="btn btn-danger m-1">Delete </a>
-
-                <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@l.BørneId" class="btn btn-primary">Update </a>
-
-            </div>
-
-        </div>
-
-
-
-    }
-
-</div>
-*@

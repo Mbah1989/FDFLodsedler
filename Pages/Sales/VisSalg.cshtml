@@ -3,7 +3,7 @@
 @{
 }
 <p>
-    <a asp-page="/Sales/OpretSalg"> Nyt Medlem</a>
+    <a asp-page="/Sales/OpretSalg"> New Sales</a>
 </p>
 <h1> Liste Af salg</h1>
 
@@ -28,18 +28,18 @@
 
                     @* <td> @item.BarnId </td>*@
 
-                    <td> @item.Salg_Id </td>
+                  
                     <td> @item.BørneId </td>
                     <td> @item.AntalReturneret</td>
                     <td> @item.AntalSolgt</td>
 
                     <td>
-                        <a asp-page="/Sales/SletSalg" asp-route-sid="@item.BørneId" class="btn btn-danger m-1">Delete </a>
+                        <a asp-page="/Sales/SletSalg" asp-route-sid="@item.Salg_Id" class="btn btn-danger m-1">Delete </a>
 
                     </td>
 
                     <td>
-                        <a asp-page="/Sales/OpdatereSalg" asp-route-sid="@item.BørneId" class="btn btn-primary">Update </a>
+                        <a asp-page="/Sales/OpdatereSalg" asp-route-sid="@item.Salg_Id" class="btn btn-primary">Update </a>
 
 
                     </td>

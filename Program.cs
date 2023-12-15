@@ -33,6 +33,7 @@ namespace FDFLodsedler
             builder.Services.AddTransient<ILodseldler, LodseldlerService>();
             builder.Services.AddTransient<ISalg, SalgService>();
             builder.Services.AddTransient<IBestyrelse, BestyrelseService>();
+            builder.Services.AddTransient<IBetaling, BetalingService>();
 
             var app = builder.Build();
 

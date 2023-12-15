@@ -1,0 +1,51 @@
+﻿@page
+@model FDFLodsedler.Pages.Payments.VisBetalingsModel
+@{
+}
+<p>
+    <a asp-page="/Payments/OpretBetaling"> Ny Betaling</a>
+</p>
+<h1> Liste Af Betalinger</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Børn_Id</th>
+            <th>Amount</th>
+            <th>Payment Method</th>
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.betalings != null)
+        {
+            @foreach (var item in Model.betalings)
+            {
+                        <tr>
+                    <td> @item.BørneId </td>
+                    <td> @item.Amount </td>
+
+
+
+                            <td> @item.PaymentMethod </td>
+
+
+                            <td>
+                                <a asp-page="/Payments/SletBetaling" asp-route-sid="@item.Betal_Id" class="btn btn-danger m-1">Delete </a>
+
+                            </td>
+
+                            <td>
+                                <a asp-page="/Payments/Opdater" asp-route-sid="@item.Betal_Id" class="btn btn-primary">Update </a>
+
+
+                            </td>
+
+                        </tr>
+            }
+        }
+</table>

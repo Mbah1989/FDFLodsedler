@@ -1,0 +1,22 @@
+﻿@page
+@model FDFLodsedler.Pages.Board.OpdatereMedlemmerModel
+@{
+}
+<form method="post">
+    <div class="form-group">
+
+        <input asp-for="bestyrelse.Bestyrelse_Id" class="form-control" type="hidden" />
+
+    </div>
+
+    <div class="form-group">
+        <label asp-for="bestyrelse.Navn"></label>
+        <input asp-for="bestyrelse.Navn" class="form-control" />
+        <span asp-validation-for="bestyrelse.Navn" class="text-danger"></span>
+    </div>
+    
+
+
+
+    <input type="submit" value="Opdater Medlem" class="btn btn-primary" />
+</form>

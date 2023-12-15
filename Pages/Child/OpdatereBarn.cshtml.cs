@@ -31,7 +31,9 @@ namespace FDFLodsedler.Pages.Child
             {
                 return Page();
             }
+            Børn B = børn;
             Børn.Update(børn);
+           
 
             return RedirectToPage("/Child/VisBarn");
         }

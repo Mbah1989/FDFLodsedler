@@ -1,0 +1,48 @@
+﻿@page
+@model FDFLodsedler.Pages.Board.TopSellerModel
+@{
+}
+<p>
+    <a asp-page="/Leaders/OpretLeder"> Nyt Medlem</a>
+</p>
+<h1> Liste Af Lodselder</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            @*  <th> BarnId </th>*@
+            
+            <th>Børn_Id </th>
+            <th>AntalSolgt </th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model.salgs!= null)
+        {
+            @foreach (var item in Model.salgs)
+            {
+                <tr>
+
+                    @* <td> @item.BarnId </td>*@
+
+                    
+                    <td> @item.BørneId</td>
+                    <td> @item.AntalSolgt</td>
+
+                    <td>
+                        <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@item.BørneId" class="btn btn-danger m-1">Delete </a>
+
+                    </td>
+
+                    <td>
+                        <a asp-page="/Tickets/VisLodseldler" asp-route-sid="@item.BørneId" class="btn btn-primary">Update </a>
+
+
+                    </td>
+
+                </tr>
+            }
+        }
+</table>

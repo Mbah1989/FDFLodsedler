@@ -38,17 +38,17 @@ namespace FDFLodsedler.Services
             Context.SaveChanges();
         }
 
-        public void Update(Børn børn)
+        public void Update(Børn Updatebørn)
         {
-            Børn ExistingChild = Context.Børns.FirstOrDefault(e => e.Børn_Id == børn.Børn_Id);
+            Børn ExistingChild = Context.Børns.FirstOrDefault(e => e.Børn_Id == Updatebørn.Børn_Id);
 
-            Context.Attach(børn);
+           
 
             if (ExistingChild != null)
             {
 
-                ExistingChild.Navn = børn.Navn;
-                ExistingChild.GruppeId = børn.GruppeId;
+                ExistingChild.Navn = Updatebørn.Navn;
+                ExistingChild.GruppeId = Updatebørn.GruppeId;
                
 
             }
@@ -58,5 +58,6 @@ namespace FDFLodsedler.Services
 
 
         }
+       
     }
 }

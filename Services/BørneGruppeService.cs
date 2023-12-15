@@ -38,9 +38,23 @@ namespace FDFLodsedler.Services
             context.SaveChanges();  
         }
 
-        public void Update(BørneGruppe børn)
+        public void Update(BørneGruppe UpdatedGruppebørn)
         {
-            throw new NotImplementedException();
+            BørneGruppe ExistingBørneGruppe = context.BørnGruppes.FirstOrDefault(G => G.Gruppe_Id == UpdatedGruppebørn.Gruppe_Id);
+
+
+
+            if (ExistingBørneGruppe != null)
+            {
+
+                ExistingBørneGruppe.Navn = UpdatedGruppebørn.Navn;
+                ExistingBørneGruppe.LederId = UpdatedGruppebørn.LederId;
+
+
+            }
+
+
+            context.SaveChanges();
         }
     }
 }
