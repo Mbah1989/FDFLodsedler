@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Payments
 {
+    //[Authorize(Roles = "Administrator")]
     public class VisBetalingsModel : PageModel
     {
         private IBetaling Betailing;

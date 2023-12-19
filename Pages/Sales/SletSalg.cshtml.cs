@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Sales
 {
+    //[Authorize(Roles = "Administrator")]
     public class SletSalgModel : PageModel
     {
         private ISalg Salg;

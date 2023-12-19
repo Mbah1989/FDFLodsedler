@@ -7,6 +7,7 @@ namespace FDFLodsedler.Pages.Leaders
 {
     public class SletLederModel : PageModel
     {
+        //[Authorize(Roles = "Administrator")]
         private Ileder Ileder;
 
         public SletLederModel(Ileder ileder)

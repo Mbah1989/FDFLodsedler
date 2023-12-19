@@ -1,12 +1,16 @@
 using FDFLodsedler.Interface;
 using FDFLodsedler.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Data;
 
 namespace FDFLodsedler.Pages.Board
 {
+    //[Authorize(Roles = "Administrator")]
     public class AddMedlemmerModel : PageModel
     {
+      
         private IBestyrelse Bestyrelse;
 
         public AddMedlemmerModel(IBestyrelse bestyrelse)

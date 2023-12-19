@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Payments
 {
+    //[Authorize(Roles = "Administrator")]
     public class SletBetalingModel : PageModel
     {
         private IBetaling Betaling;

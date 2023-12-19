@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Tickets
 {
+    //[Authorize(Roles = "Administrator")]
     public class SletLodselderModel : PageModel
     {
         private ILodseldler lodseldler;

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Roles
 {
+    //[Authorize(Roles = "Administrator")]
     public class GetRolesModel : PageModel
     {
         private readonly RoleManager<IdentityRole> roleManager;

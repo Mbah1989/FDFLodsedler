@@ -1,26 +1,23 @@
 using FDFLodsedler.Interface;
 using FDFLodsedler.Model;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Data;
 
 namespace FDFLodsedler.Pages.Sales
 {
     //[Authorize(Roles = "Administrator")]
-
-    public class VisSalgModel : PageModel
+    public class OverSkudModel : PageModel
     {
         private ISalg Salg;
 
-        public VisSalgModel(ISalg salg)
+        public OverSkudModel(ISalg salg)
         {
             Salg = salg;
         }
 
         [BindProperty]
 
-        public IEnumerable<Salg> Salgs { get; set; }
+        public int  Salgs { get; set; }
 
 
 
@@ -28,7 +25,7 @@ namespace FDFLodsedler.Pages.Sales
 
         public void OnGet()
         {
-            Salgs = Salg.GetSalg();
+            Salgs = Salg.Overskud();
         }
     }
 }

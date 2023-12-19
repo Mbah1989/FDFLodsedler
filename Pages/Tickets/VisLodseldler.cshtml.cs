@@ -7,8 +7,9 @@ using System.Data;
 
 namespace FDFLodsedler.Pages.Tickets
 {
+    //[Authorize(Roles = "Administrator")]
 
-    
+
     public class VisLodseldlerModel : PageModel
     {
         private ILodseldler lodseldler;

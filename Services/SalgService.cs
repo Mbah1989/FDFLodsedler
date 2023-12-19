@@ -34,6 +34,14 @@ namespace FDFLodsedler.Services
             return context.Salgs;
         }
 
+        public int Overskud()
+        {
+            var Revenue = context.Salgs.Sum(s => s.AntalSolgt*100);
+            var Cost = context.Lodsedlers.Sum(s => s.AntalUdleveret*100);
+            var Profit = Revenue - Cost;
+            return Profit;
+        }
+
         public void RemoveSalg(Salg salg)
         {
             context.Salgs.Remove(salg);

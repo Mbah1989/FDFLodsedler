@@ -2,44 +2,39 @@
 @model FDFLodsedler.Pages.Board.VisMedlemmerModel
 @{
 }
-<p>
-    <a asp-page="/Board/AddMedlemmer"> Nyt Medlem</a>
-</p>
-<h1>Medlemslisten</h1>
-
-<table class="table">
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2>Oversigt over Bestyrelsesmedlemmer</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="/Board/AddMedlemmer" class="btn btn-primary">Ny Bestyrelsesmedlem</a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table table-striped" style="width:100%">
     <thead>
         <tr>
-         
-            <th>Navn</th>
-            
-
+            <th>Bestyrelses id</th>
+            <th>Navn </th>
+            <th>Slet</th>
+            <th>Opdater</th>
         </tr>
     </thead>
     <tbody>
-
         @if (Model.bestyrelses != null)
         {
             @foreach (var item in Model.bestyrelses)
             {
                 <tr>
-
-                  
-
-                    <td> @item.Navn </td>
-                    
-
+                    <td width="25%"> @item.Bestyrelse_Id </td>
+                    <td width="50%"> @item.Navn</td>
                     <td>
                         <a asp-page="/Board/SletMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-danger m-1">Slet </a>
-
                     </td>
-
                     <td>
-                        <a asp-page="/Board/OpdatereMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-primary">Opdater </a>
-
-
+                        <a asp-page="/Board/OpdatereMedlemmer" asp-route-sid="@item.Bestyrelse_Id" class="btn btn-primary m-1">Opdater </a>
                     </td>
-
                 </tr>
             }
         }

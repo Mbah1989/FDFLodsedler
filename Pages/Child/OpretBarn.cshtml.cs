@@ -5,7 +5,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Child
 {
-    
+    //[Authorize(Roles = "Administrator")]
+
     public class OpretBarnModel : PageModel
     {
 

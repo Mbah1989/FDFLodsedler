@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Board
 {
+    //[Authorize(Roles = "Administrator")]
     public class SletMedlemmerModel : PageModel
     {
 

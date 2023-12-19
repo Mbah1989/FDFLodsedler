@@ -7,7 +7,7 @@ using System.Data;
 
 namespace FDFLodsedler.Pages.Board
 {
-   
+    //[Authorize(Roles = "Administrator")]
     public class VisMedlemmerModel : PageModel
     {
         private IBestyrelse Bestyrelse;

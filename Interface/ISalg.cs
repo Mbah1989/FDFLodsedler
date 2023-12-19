@@ -15,5 +15,7 @@ namespace FDFLodsedler.Interface
         public void Update(Salg salg);
 
         public IEnumerable<Salg> TopSalg();
+
+        public int Overskud();
     }
 }

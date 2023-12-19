@@ -6,6 +6,7 @@ using System.Diagnostics.Metrics;
 
 namespace FDFLodsedler.Pages.Tickets
 {
+    //[Authorize(Roles = "Administrator")]
     public class OpdatereLodseldlerModel : PageModel
     {
 

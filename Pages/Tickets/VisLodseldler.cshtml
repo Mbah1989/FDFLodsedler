@@ -2,46 +2,41 @@
 @model FDFLodsedler.Pages.Tickets.VisLodseldlerModel
 @{
 }
-<p>
-    <a asp-page="/Tickets/OpretLodseldler"> Nyt Lodseddel</a>
-</p>
-<h1> Oversigt over lodsedler</h1>
-
-<table class="table">
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2> Oversigt over lodsedler</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="/Tickets/OpretLodseldler" class="btn btn-primary">Ny Lodseddel</a>
+        </div>
+    </div>
+</div>
+<table class="table table-bordered table table-striped" style="width:100%">
     <thead>
         <tr>
-            @*  <th> BarnId </th>*@
-            <th>Lod_Id </th>
-            <th>Børn_Id </th>
-            <th>AntalUdleveret </th>
-            
+            <th>Lod Id </th>
+            <th>Børn Id </th>
+            <th>Antal Udleveret </th>
+            <th>Slet</th>
+            <th>Opdater</th>
         </tr>
     </thead>
     <tbody>
-
         @if (Model.Lodseldler != null)
         {
             @foreach (var item in Model.Lodseldler)
             {
                 <tr>
-
-                    @* <td> @item.BarnId </td>*@
-
-                    <td> @item.Lod_Id </td>
-                     <td> @item.BørneId</td>
-                    <td> @item.AntalUdleveret</td>
-   
+                    <td width="10%"> @item.Lod_Id </td>
+                    <td width="45%"> @item.BørneId</td>
+                    <td width="45%"> @item.AntalUdleveret</td>
                     <td>
                         <a asp-page="/Tickets/SletLodselder" asp-route-sid="@item.Lod_Id" class="btn btn-danger m-1">Slet </a>
-                      
                     </td>
-                   
                     <td>
-                        <a asp-page="/Tickets/OpdatereLodseldler" asp-route-sid="@item.Lod_Id" class="btn btn-primary">Opdater </a>
-
-
+                        <a asp-page="/Tickets/OpdatereLodseldler" asp-route-sid="@item.Lod_Id" class="btn btn-primary m-1">Opdater </a>
                     </td>
-
                 </tr>
             }
         }

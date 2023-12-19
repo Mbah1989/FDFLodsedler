@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.ChildrendGroup
 {
+    //[Authorize(Roles = "Administrator")]
     public class OpretGruppeModel : PageModel
     {
 

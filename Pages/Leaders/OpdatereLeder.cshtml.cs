@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace FDFLodsedler.Pages.Leaders
 {
+    //[Authorize(Roles = "Administrator")]
     public class OpdatereLederModel : PageModel
     {
         private Ileder leder;
